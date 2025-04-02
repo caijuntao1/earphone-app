@@ -1,0 +1,145 @@
+<template>
+	<view class="popup-content">
+		<view class="popup-frame">
+			<view class="popup-image">
+				<image src="/static/image/6.jpg" mode="widthFix"></image>
+			</view>
+			<list class="popup-info">
+				<cell>
+					<view class="popup-item">
+						<text class="popup-tip" style="font-size: 14rpx;">藍牙名稱：</text>
+						<text class="popup-name" style="font-size: 14rpx;">Remix</text>
+					</view>
+				</cell>
+				<cell>
+					<view class="popup-item">
+						<text class="popup-tip" style="font-size: 14rpx;">藍牙型號：</text>
+						<text class="popup-name" style="font-size: 14rpx;">Sunjom</text>
+					</view>
+				</cell>
+				<cell>
+					<view class="popup-item">
+						<text class="popup-tip" style="font-size: 14rpx;">藍牙尺寸：</text>
+						<text class="popup-name" style="font-size: 14rpx;">13mm</text>
+					</view>
+				</cell>
+				<cell>
+					<view class="popup-item">
+						<text class="popup-tip" style="font-size: 14rpx;">續航時長：</text>
+						<text class="popup-name" style="font-size: 14rpx;">1-2 hours</text>
+					</view>
+				</cell>
+				<cell>
+					<view class="popup-item">
+						<text class="popup-tip" style="font-size: 14rpx;">充电端口类型：</text>
+						<text class="popup-name" style="font-size: 14rpx;">Type C</text>
+					</view>
+				</cell>
+				<cell>
+					<view class="popup-item">
+						<text class="popup-tip" style="font-size: 14rpx;">藍牙版本：</text>
+						<text class="popup-name" style="font-size: 14rpx;">5.3</text>
+					</view>
+				</cell>
+			</list>
+		</view>
+		<!-- <view class="bluetooth-btn">
+				<view class="btn">連接藍牙</view>
+			</view> -->
+	</view>
+</template>
+
+<script>
+	import {
+		mapState
+	} from 'vuex'
+	export default {
+		data() {
+			return {
+				// userInfo: ''
+			};
+		},
+		computed: {
+			...mapState(['statusBarHeight', 'token', 'language']),
+			montage() {
+				return (name) => {
+					if (name) {
+						return `${name}_${this.language}`
+					} else {
+						return ''
+					}
+				}
+			}
+		},
+		onLoad() {
+
+		},
+		methods: {}
+	}
+</script>
+
+<style scoped lang="scss">
+	.popup-content {
+		padding: 60rpx;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		border-radius: 16rpx 16rpx 0 0;
+		overflow: hidden;
+		padding: 20rpx 30rpx;
+	}
+
+	.popup-frame {
+		position: relative;
+		flex-direction: row;
+	}
+
+	.popup-image {
+		width: 200rpx;
+		// margin-right: 60rpx;
+	}
+
+	image {
+		width: 100%;
+	}
+
+	.popup-info {
+		// width: 500rpx;
+		height: 200rpx;
+		margin-left: 20rpx;
+		// overflow-y: auto;
+
+	}
+
+	.popup-item {
+		flex-direction: row;
+		margin-bottom: 10rpx;
+		// font-size: 6px;
+	}
+
+	.popup-tip {
+		width: 100rpx;
+		flex-wrap: wrap;
+	}
+
+	.popup-name {
+		width: 370rpx;
+		flex-wrap: wrap;
+	}
+
+	.bluetooth-btn {
+		margin-top: 20rpx;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.btn {
+		padding: 20rpx 40rpx;
+		border-radius: 16rpx;
+		color: #fff;
+		background: #4C3EC9;
+	}
+</style>

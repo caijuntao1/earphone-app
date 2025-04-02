@@ -1,0 +1,39 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none",
+					"nvueStyleCompiler": "uni-app",
+					"subNVues": [{
+						"id": "popups",
+						"path": "pages/popup/popup",
+						"type": "popup",
+						"style": {
+							"position": "absolute",
+							"bottom": "0",
+							"mask": "rgba(0,0,0,0.5)",
+							"width": "100%",
+							"height": "780rpx",
+							"background": "transparent"
+						}
+					}]
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"pageOrientation": "portrait" //横屏配置，全局屏幕旋转设置(仅 APP/微信/QQ小程序)，支持 auto / portrait / landscape
+	},
+	"uniIdRouter": {}
+}
