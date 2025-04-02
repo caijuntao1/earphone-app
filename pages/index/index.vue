@@ -125,9 +125,9 @@
 							</view>
 						</view>
 					</view>
-					<!-- <view class="bluetooth-btn">
+					<view class="bluetooth-btn">
 						<view class="btn">連接藍牙</view>
-					</view> -->
+					</view>
 				</view>
 			</u-popup>
 		</view>
